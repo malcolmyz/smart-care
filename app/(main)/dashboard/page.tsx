@@ -1,6 +1,6 @@
 import styles from "@/app/styles/dashboard.module.css";
 
-export default function Dashboard() {
+export default function DashboardPage() {
   return (
     <div className={styles["main-grid"]}>
           <div className={styles["alert-area"]}>
