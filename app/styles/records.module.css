@@ -1,0 +1,56 @@
+/* --- 記録入力画面用の新しいスタイル --- */
+.input-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* カードを並べる */
+  gap: 30px;
+  padding-top: 20px;
+}
+
+.input-menu-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  text-align: center;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  cursor: pointer;
+  border-left: 5px solid; /* 色を付けるための装飾 */
+}
+
+.input-menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-meal {
+  border-left-color: #4caf50; /* 食事: 緑 */
+}
+.card-excretion {
+  border-left-color: #2196f3; /* 排泄: 青 */
+}
+.card-vital {
+  border-left-color: #ff9800; /* バイタル: オレンジ */
+}
+.card-other {
+  border-left-color: #9c27b0; /* その他: 紫 */
+}
+
+.input-menu-card h2 {
+  font-size: 22px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.input-menu-card p {
+  color: #777;
+  font-size: 14px;
+}
+.icon {
+  font-size: 40px;
+  margin-bottom: 5px;
+  display: block;
+}
