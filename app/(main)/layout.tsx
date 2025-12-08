@@ -1,6 +1,10 @@
-import styles from "@/app/styles/dashboard.module.css";
+import styles from "@/app/styles/main-layout.module.css";
 
-export default function MainLayout() {
+export default function MainLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <div className={styles["dashboard-page"]}>
       <div className={styles["dashboard-container"]}>
@@ -29,6 +33,7 @@ export default function MainLayout() {
               </a>
             </div>
           </div>
+          {children}
         </div>
       </div>
     </div>
