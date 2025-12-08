@@ -1,0 +1,134 @@
+/* --- 食事記録画面用のスタイル --- */
+.record-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 記録フォーム (左) と履歴 (右) */
+  gap: 20px;
+  align-items: start; /* 上揃え */
+}
+
+/* フォームエリア */
+.record-form-area,
+.recent-records-area {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.record-form-area h2,
+.recent-records-area h3 {
+  font-size: 18px;
+  color: #4caf50; /* 食事記録のテーマカラー (緑) */
+  border-bottom: 2px solid #4caf50;
+  padding-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* フォームの行スタイル */
+.form-group {
+  margin-bottom: 18px;
+}
+.form-group label {
+  display: block;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* paddingをwidthに含める */
+  font-size: 14px;
+}
+
+.input-inline {
+  display: flex;
+  gap: 15px;
+}
+.input-inline > div {
+  flex-grow: 1;
+}
+
+/* 摂取量ボタン */
+.intake-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.intake-buttons button {
+  flex-grow: 1;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
+  font-size: 14px;
+  color: #333;
+}
+.intake-buttons button:hover {
+  background-color: #e0e0e0;
+}
+.intake-buttons button.active {
+  background-color: #4caf50; /* 選択時: 緑 */
+  color: white;
+  border-color: #4caf50;
+  font-weight: bold;
+}
+
+/* 送信ボタン */
+.submit-group {
+  margin-top: 30px;
+  text-align: right;
+}
+.submit-group button {
+  padding: 12px 30px;
+  background-color: #3f51b5; /* 青色 */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.submit-group button:hover {
+  background-color: #303f9f;
+}
+
+/* 最近の記録エリアのテーブル */
+.recent-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.recent-table th,
+.recent-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+.recent-table th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+  color: #555;
+}
+.recent-table tbody tr:hover {
+  background-color: #e8f5e9; /* 緑系のホバー */
+  cursor: pointer;
+}
+.record-note {
+  font-size: 12px;
+  color: #888;
+}
+.intake-amount {
+  font-weight: bold;
+  color: #4caf50;
+}
