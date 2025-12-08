@@ -1,7 +1,7 @@
 "use client";
 // app/login/page.tsx
 import { useState } from "react";
-import styles from "./login.module.css";
+import styles from "@/app/styles/login.module.css";
 
 export default function LoginPage() {
   const [staffId, setStaffId] = useState("");
