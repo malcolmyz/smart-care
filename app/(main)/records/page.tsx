@@ -1,28 +1,25 @@
 'use client'; 
-import { useState } from 'react';
+import Link from "next/link";
 import styles from "@/app/styles/records.module.css";
 
 export default function RecordsPage() {
   return (
     <div id="content-area">
       <div className={styles["input-menu-grid"]}>
-        <div
-          className={`${styles["input-menu-card"]} ${styles["card-meal"]}`}
-          onClick={() => alert('食事記録画面へ遷移')}
-        >
+        
+        <Link href="/records/meals" className={`${styles["input-menu-card"]} ${styles["card-meal"]}`}>
           <span className={styles.icon}>🍚</span>
           <h2>食事記録</h2>
           <p>利用者様の食事・水分摂取量を記録します。</p>
-        </div>
+        </Link>
 
-        <div
+        <Link href="/records/excretion"
           className={`${styles["input-menu-card"]} ${styles["card-excretion"]}`}
-          onClick={() => alert('排泄記録画面へ遷移')}
         >
           <span className={styles.icon}>🚽</span>
           <h2>排泄記録</h2>
           <p>排泄（便/尿）の時間、回数、性状などを記録します。</p>
-        </div>
+        </Link>
 
         <div
           className={`${styles["input-menu-card"]} ${styles["card-vital"]}`}

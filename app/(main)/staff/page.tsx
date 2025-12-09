@@ -1,5 +1,5 @@
 'use client'; 
-import { useState } from 'react';
+import Link from "next/link";
 import styles from "@/app/styles/staff.module.css";
 
 export default function StaffPage() {
@@ -58,12 +58,9 @@ export default function StaffPage() {
       <div className={styles["side-actions-area"]}>
         <div className={styles["action-box"]}>
           <h3>新規スタッフ</h3>
-          <button
-            className={styles["new-register-button"]}
-            onClick={() => alert('新規スタッフ登録フォームへ遷移します')}
-          >
+          <Link href="/staff/create" className={styles["new-register-button"]}>
             + 新規スタッフ登録
-          </button>
+          </Link>
         </div>
 
         <div className={styles["action-box"]}>

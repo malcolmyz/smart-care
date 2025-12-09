@@ -49,6 +49,7 @@
 
 /* 新規登録ボタン */
 .new-register-button {
+  display: block;
   width: 100%;
   padding: 12px;
   background-color: #7b1fa2; /* 明るい紫 */

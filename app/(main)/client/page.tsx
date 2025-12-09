@@ -1,6 +1,6 @@
 'use client'; 
 import styles from "@/app/styles/client.module.css";
-
+import Link from "next/link";
 export default function ClientPage() {
   return (
     <div className={styles["management-grid"]}>
@@ -57,12 +57,9 @@ export default function ClientPage() {
       <div className={styles["side-actions-area"]}>
         <div className={styles["action-box"]}>
           <h3>新規登録</h3>
-          <button 
-            className={styles["new-register-button"]} 
-            onClick={() => alert('新規利用者登録フォームへ遷移します')}
-          >
+          <Link href="/client/create" className={styles["new-register-button"]}>
             + 新規利用者登録
-          </button>
+          </Link>
         </div>
 
         <div className={styles["action-box"]}>
