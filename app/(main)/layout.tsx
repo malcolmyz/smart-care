@@ -16,11 +16,11 @@ export default function MainLayout({
               🏠 ダッシュボード
             </Link>
             <Link href="/records">📝 記録入力</Link>
-            <a href="#">📸 見守りカメラ</a>
-            <a href="#">🗓️ 記録履歴</a>
+            <Link href="/under-construction">📸 見守りカメラ</Link>
+            <Link href="/under-construction">🗓️ 記録履歴</Link>
             <Link href="/client">🧑‍💻 利用者管理</Link>
             <Link href="/staff">👥 スタッフ管理</Link>
-            <a href="#">📊 レポート</a>
+            <Link href="/under-construction">📊 レポート</Link>
           </div>
         </div>
 
