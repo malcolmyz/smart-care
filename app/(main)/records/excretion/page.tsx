@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import styles from "@/app/styles/excretion.module.css";
 
-export default function ExcretionPage() {
+export default function RecordsExcretionPage() {
   const [excretionType, setExcretionType] = useState('stool');
   const [excretionCondition, setExcretionCondition] = useState('amount-normal');
 

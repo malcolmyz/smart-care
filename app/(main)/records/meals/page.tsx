@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import styles from "@/app/styles/meals.module.css";
 
-export default function MealsPage() {
+export default function RecordsMealsPage() {
   const [intakeAmount, setIntakeAmount] = useState('full');
 
   const intakeOptions = [
