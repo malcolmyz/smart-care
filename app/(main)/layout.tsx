@@ -1,4 +1,5 @@
 import styles from "@/app/styles/main-layout.module.css";
+import Link from "next/link";
 
 export default function MainLayout({
   children,
@@ -11,15 +12,15 @@ export default function MainLayout({
         <div className={styles.sidebar}>
           <h2>SmartCARE</h2>
           <div className={styles["sidebar-menu"]}>
-            <a href="#" className={styles.active}>
+            <Link href="/dashboard" className={styles.active}>
               🏠 ダッシュボード
-            </a>
-            <a href="#">📝 記録入力</a>
-            <a href="#">📸 見守りカメラ</a>
-            <a href="#">🗓️ 記録履歴</a>
-            <a href="#">🧑‍💻 利用者管理</a>
-            <a href="#">👥 スタッフ管理</a>
-            <a href="#">📊 レポート</a>
+            </Link>
+            <Link href="/records">📝 記録入力</Link>
+            <Link href="/under-construction">📸 見守りカメラ</Link>
+            <Link href="/under-construction">🗓️ 記録履歴</Link>
+            <Link href="/client">🧑‍💻 利用者管理</Link>
+            <Link href="/staff">👥 スタッフ管理</Link>
+            <Link href="/under-construction">📊 レポート</Link>
           </div>
         </div>
 
