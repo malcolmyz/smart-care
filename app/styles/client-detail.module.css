@@ -90,6 +90,19 @@
   background-color: #f9f9f9; /* 閲覧モードでの背景色 */
 }
 
+/*
+  TSX側では「状態(isEditing)」だけを持ち、見た目はCSS側で管理する。
+  - readonlyField: 閲覧モードの見た目
+  - editableField: 編集モードの見た目
+*/
+.readonlyField {
+  background-color: #f9f9f9;
+}
+
+.editableField {
+  background-color: #fff;
+}
+
 /* 重要な注意事項の強調 */
 .form-group textarea#notes {
   background-color: #fff9e6; /* 薄い黄色 */
