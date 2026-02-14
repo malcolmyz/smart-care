@@ -58,7 +58,7 @@ export default function StaffPage() {
       <div className={styles["side-actions-area"]}>
         <div className={styles["action-box"]}>
           <h3>新規スタッフ</h3>
-          <Link href="/staff/create" className={styles["new-register-button"]}>
+          <Link href="/staff/register" className={styles["new-register-button"]}>
             + 新規スタッフ登録
           </Link>
         </div>
