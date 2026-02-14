@@ -80,8 +80,7 @@ export default function StaffPage() {
             </select>
             <button
               type="submit"
-              className={styles["new-register-button"]}
-              style={{ backgroundColor: '#3f51b5', marginTop: '10px' }}
+              className={`${styles["new-register-button"]} ${styles["search-button"]}`}
             >
               検索
             </button>
