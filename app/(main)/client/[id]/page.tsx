@@ -83,10 +83,10 @@ export default function ClientDetailPage() {
           </div>
 
           <div className={styles["form-group"]}>
-            <label htmlFor="id">利用者ID</label>
+            <label htmlFor="client_id">利用者ID</label>
             <input
               type="text"
-              id="id"
+              id="client_id"
               value={formData.id}
               readOnly
               className={styles.readonlyField}
