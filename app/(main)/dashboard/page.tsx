@@ -1,13 +1,6 @@
 import styles from "@/app/styles/dashboard.module.css";
 import { Alert, Task, ClientSummary, DashboardData } from "@/app/types/dashboard";
-
-// サーバーサイドでデータ取得
-async function getDashboardData(): Promise<DashboardData> {
-  const res = await fetch("http://localhost:3000/api/dashboard", {
-    cache: "no-store",
-  });
-  return res.json();
-}
+import { getDashboardData } from "@/app/lib/dashboard";
 
 export default async function DashboardPage() {
   const data = await getDashboardData();
