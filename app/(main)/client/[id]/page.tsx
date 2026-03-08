@@ -31,9 +31,7 @@ export default function ClientDetailPage() {
     setIsEditing(false);
   };
 
-  const inputStyle = {
-    backgroundColor: isEditing ? '#fff' : '#f9f9f9',
-  };
+  const fieldClassName = isEditing ? styles.editableField : styles.readonlyField;
 
   return (
     <div className={styles.container}>
@@ -69,7 +67,7 @@ export default function ClientDetailPage() {
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               readOnly={!isEditing}
-              style={inputStyle}
+              className={fieldClassName}
             />
           </div>
           <div className={styles["form-group"]}>
@@ -80,18 +78,18 @@ export default function ClientDetailPage() {
               value={formData.room}
               onChange={(e) => setFormData({ ...formData, room: e.target.value })}
               readOnly={!isEditing}
-              style={inputStyle}
+              className={fieldClassName}
             />
           </div>
 
           <div className={styles["form-group"]}>
-            <label htmlFor="id">利用者ID</label>
+            <label htmlFor="client_id">利用者ID</label>
             <input
               type="text"
-              id="id"
+              id="client_id"
               value={formData.id}
               readOnly
-              style={{ backgroundColor: '#f9f9f9' }}
+              className={styles.readonlyField}
             />
           </div>
           <div className={styles["form-group"]}>
@@ -102,7 +100,7 @@ export default function ClientDetailPage() {
               value={formData.birth}
               onChange={(e) => setFormData({ ...formData, birth: e.target.value })}
               readOnly={!isEditing}
-              style={inputStyle}
+              className={fieldClassName}
             />
           </div>
 
@@ -114,7 +112,7 @@ export default function ClientDetailPage() {
               value={formData.contact}
               onChange={(e) => setFormData({ ...formData, contact: e.target.value })}
               readOnly={!isEditing}
-              style={inputStyle}
+              className={fieldClassName}
             />
           </div>
         </div>
@@ -130,7 +128,7 @@ export default function ClientDetailPage() {
               value={formData.mealType}
               onChange={(e) => setFormData({ ...formData, mealType: e.target.value })}
               disabled={!isEditing}
-              style={inputStyle}
+              className={fieldClassName}
             >
               <option>常食</option>
               <option>刻み食</option>
@@ -144,7 +142,7 @@ export default function ClientDetailPage() {
               value={formData.swallow}
               onChange={(e) => setFormData({ ...formData, swallow: e.target.value })}
               disabled={!isEditing}
-              style={inputStyle}
+              className={fieldClassName}
             >
               <option>良好</option>
               <option>時間かかる</option>

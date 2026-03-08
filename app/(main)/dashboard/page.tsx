@@ -1,45 +1,6 @@
 import styles from "@/app/styles/dashboard.module.css";
-
-// データの型定義
-type Alert = {
-  id: number;
-  time: string;
-  clientName: string;
-  room: string;
-  type: string;
-  detail?: string;
-};
-
-type Task = {
-  id: number;
-  time: string;
-  content: string;
-};
-
-type ClientSummary = {
-  id: number;
-  name: string;
-  room: string;
-  lastMeal: string;
-  mealAmount: string;
-  lastExcretion: string;
-  excretionDetail: string;
-  notes: string;
-};
-
-type DashboardData = {
-  alerts: Alert[];
-  tasks: Task[];
-  clientSummaries: ClientSummary[];
-};
-
-// サーバーサイドでデータ取得
-async function getDashboardData(): Promise<DashboardData> {
-  const res = await fetch("http://localhost:3000/api/dashboard", {
-    cache: "no-store",
-  });
-  return res.json();
-}
+import { Alert, Task, ClientSummary, DashboardData } from "@/app/types/dashboard";
+import { getDashboardData } from "@/app/lib/dashboard";
 
 export default async function DashboardPage() {
   const data = await getDashboardData();

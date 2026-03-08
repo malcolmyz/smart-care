@@ -58,7 +58,7 @@ export default function StaffPage() {
       <div className={styles["side-actions-area"]}>
         <div className={styles["action-box"]}>
           <h3>新規スタッフ</h3>
-          <Link href="/staff/create" className={styles["new-register-button"]}>
+          <Link href="/staff/register" className={styles["new-register-button"]}>
             + 新規スタッフ登録
           </Link>
         </div>
@@ -80,8 +80,7 @@ export default function StaffPage() {
             </select>
             <button
               type="submit"
-              className={styles["new-register-button"]}
-              style={{ backgroundColor: '#3f51b5', marginTop: '10px' }}
+              className={`${styles["new-register-button"]} ${styles["search-button"]}`}
             >
               検索
             </button>

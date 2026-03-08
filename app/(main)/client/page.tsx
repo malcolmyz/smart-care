@@ -57,7 +57,7 @@ export default function ClientPage() {
       <div className={styles["side-actions-area"]}>
         <div className={styles["action-box"]}>
           <h3>新規登録</h3>
-          <Link href="/client/create" className={styles["new-register-button"]}>
+          <Link href="/client/register" className={styles["new-register-button"]}>
             + 新規利用者登録
           </Link>
         </div>
